@@ -35,9 +35,9 @@ Save changes.
 ## Create a desktop shortcut (optional)
 1. Right‑click Desktop → New → Shortcut.
 2. For Target enter:
-    powershell.exe -ExecutionPolicy Bypass -File "D:\Projects\Programming\PowerShell\savegameprofile.ps1"
+    powershell.exe -ExecutionPolicy Bypass -File "C:\Red Dead Redemption 2\savegameprofile.ps1"
 3. Give it a name and Finish.
-4. Use the shortcut to run the script with ExecutionPolicy bypass.
+
 
 ## Run the script
 - Double‑click the shortcut, or
@@ -54,7 +54,6 @@ Run as a user with permission to read/write the save folders.
 
 ## Troubleshooting
 - Game process not detected: confirm $gameName equals the process name in Task Manager (no .exe).
-- Permission errors: run PowerShell as Administrator or adjust folder permissions.
 - Spaces in paths: ensure paths are quoted in the script.
 - Timeout: increase $startTimeoutSeconds if the launcher takes longer.
 - Debugging: temporarily add Write-Host statements or remove Set-PSDebug -Trace 1 for cleaner output.
