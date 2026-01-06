@@ -13,7 +13,7 @@ $exitCheckInterval = 5     # seconds between exit checks
 # ----------------------------
 
 # Pre-copy
-Get-ChildItem $your_save_game -Force | Copy-Item -Destination $save_game -Recurse -Force
+Get-ChildItem $your_save_game -Force | Move-Item -Destination $save_game -Force
 Start-Sleep 3
 
 # Start launcher
@@ -34,6 +34,6 @@ while (Get-Process -Name $gameName -ErrorAction SilentlyContinue) {
 }
 
 # Post-copy
-Get-ChildItem $save_game -Force | Copy-Item -Destination $your_save_game -Recurse -Force
+Get-ChildItem $save_game -Force | Move-Item -Destination $your_save_game -Force
 
 #Set-PSDebug -off
